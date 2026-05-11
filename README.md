@@ -8,18 +8,21 @@ Because this repository is named `brew-tap`, tap it with the explicit repository
 
 ```sh
 brew tap pixxelboy/brew-tap https://github.com/pixxelboy/brew-tap.git
-brew install pixxelboy/brew-tap/codex-git-branch-hook
+brew install pixxelboy/brew-tap/codex-gitbranch-hook
 ```
 
-Then install the Codex config into a target repository:
+Then register the global Codex hook:
 
 ```sh
-codex-git-branch-hook install /path/to/your/repo
+codex-gitbranch-hook install --global
+codex-gitbranch-hook doctor
+codex-gitbranch-hook preview
 ```
 
 ## Formulae
 
-- `codex-git-branch-hook`: Codex CLI Git branch status-line configuration and SessionStart hook.
+- `codex-gitbranch-hook`: Codex CLI Git branch SessionStart hook.
+- `codex-git-branch-hook`: compatibility formula for the previous formula name.
 
 ## Note
 
